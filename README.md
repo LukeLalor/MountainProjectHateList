@@ -7,9 +7,5 @@ The "account page" will show a new column where you can remove users from your H
 Comments made by users on your hate list will be hidden
 Posts made by users on your hate list will still be visible
 
-This is a chrome extension. If you would like to install it at this time follow these steps:
-1. download this github project
-2. go to chrome://extensions/
-3. turn on "developer mode" (top right)
-4. click "load unpacked" (top left)
-5. select "MountinProjectHateList" from wherever you downloaded this project
+This is a chrome extension. If you would like to install it download it in the webstore at 
+https://chrome.google.com/webstore/detail/mountain-project-hide-lis/efikhehinlplhohdjeoilklgcjfaidhh
