@@ -9,7 +9,7 @@ chrome.storage.sync.get('hateList', function(data) {
     });
 });
 
-let userLinks = document.evaluate('//table//a[contains(@href, "mountainproject.com/user/")]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+let userLinks = document.evaluate('//table//div[contains(@class, "bio")]//a[contains(@href, "mountainproject.com/user/")]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 for ( var i=0 ; i < userLinks.snapshotLength; i++ ){
     let userLink = userLinks.snapshotItem(i);
 
@@ -18,6 +18,7 @@ for ( var i=0 ; i < userLinks.snapshotLength; i++ ){
     let bio = userLink.parentElement;
     var hideNode = document.createElement("span");
     hideNode.classList.add("text-warm", "small");
+    hideNode.style.cursor = "pointer";
     var textNode = document.createTextNode("Hide Posts");
     hideNode.appendChild(textNode);
     bio.appendChild(document.createTextNode("\n·\n"));
