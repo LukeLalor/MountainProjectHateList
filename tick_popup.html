@@ -1,0 +1,71 @@
+<!--
+This is the mountain project add tick html snippet. I have removed or changed the id's as well as the private properties
+to identify a route. Should considder a better way to keep consistent style with mp, but using this for now
+-->
+<div id="tickPopupSnippet" class="modal fade" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content" >
+      <button id="tickPopupClose" type="button" class="ap-close" data-dismiss="modal" aria-label="Close">
+        <img src="https://cdn.apstatic.com/img/icons/closeX-darkBg.svg">
+      </button>
+      <div class="modal-header" style="display: none;"></div>
+      <div class="modal-body">
+        <div class="container-fluid" ><form>
+          <h2 class="mt-2">Add Tick</h2>
+          <hr>
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="form-group">
+                <label class="primary">Name</label>
+                <input class="form-control" type="text" name="route">
+              </div>
+              <div class="form-group">
+                <label><input type="radio" name="style" value="Solo"> Solo</label><br>
+                <label><input type="radio" name="style" value="TR"> TR</label><br>
+                <label><input type="radio" name="style" value="Follow"> Follow</label><br>
+                <label><input id="private-lead-toggle" type="radio" name="style" value="Lead"> Lead</label><br>
+                <div id="lead-suboptions" class="leadOptions pl-2 text-muted">
+                  <label class="show-tooltip" title="" data-original-title="No beta, first attempt, clean lead">
+                    <input class="lead-suboption" type="radio" name="leadstyle" value="Onsight"> Onsight</label><br>
+                  <label class="show-tooltip" title="" data-original-title="Some beta, no prior attempts">
+                    <input class="lead-suboption" type="radio" name="leadstyle" value="Flash"> Flash</label><br>
+                  <label class="show-tooltip" title="" data-original-title="Clean lead but not first attempt">
+                    <input class="lead-suboption" type="radio" name="leadstyle" value="Redpoint"> Redpoint</label><br>
+                  <label class="show-tooltip" title="" data-original-title="Pre-placed pro, no hangs or falls">
+                    <input class="lead-suboption" type="radio" name="leadstyle" value="Pinkpoint"> Pinkpoint</label><br>
+                  <label>
+                    <input class="lead-suboption" type="radio" name="leadstyle" value="Fell/Hung"> Fell / Hung</label><br>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="form-group">
+                <label class="primary">Grade</label>
+                <input class="form-control" type="text" name="grade">
+              </div>
+              <div class="form-group">
+                <label class="primary">Date</label>
+                <input class="form-control date-control hasDatepicker" type="text" name="date" id="privateTickDate">
+              </div>
+              <div class="form-group">
+                <label class="primary">Pitches</label>
+                <input class="form-control" type="number" name="pitches" min="1" max="11" value="1">
+              </div>
+              <div class="form-group">
+                <label class="primary">Notes</label>
+                <textarea maxlength="100" name="comments" class="form-control short" placeholder="Optional. Gear? Falls?"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <span id="privateTickButton" type="submit" class="btn btn-primary">Save Tick</span>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div style="display: none; opacity: 0;"><h2>Loading...</h2></div>
+      </div>
+    </div>
+  </div>
+</div>

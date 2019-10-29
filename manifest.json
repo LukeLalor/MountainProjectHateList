@@ -10,7 +10,13 @@
     }, {
       "matches": ["https://www.mountainproject.com/edit/account"],
       "js": ["account_script.js"]
+    }, {
+      "matches": ["https://www.mountainproject.com/*"],
+      "js": ["private_ticks.js"]
     }
+  ],
+  "web_accessible_resources": [
+    "tick_popup.html"
   ],
   "manifest_version": 2
 }
