@@ -46,9 +46,14 @@ function getHateList(data) {
 }
 
 function hidePosts(userLinkString) {
-    var posts = document.evaluate('//table//tr[.//a[contains(@href, "' + userLinkString + '")]]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+    var myRegexp = /user\/([0-9]+)\//g;
+    var match = myRegexp.exec(userLinkString);
+    let userId = match[1];
+
+    var posts = document.evaluate('//table//tr[.//a[contains(@href, "' + userId + '")]]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
     for (var i = 0; i < posts.snapshotLength; i++) {
         let post = posts.snapshotItem(i);
         post.parentElement.removeChild(post)
+        console.log("removed a post from " + userLinkString)
     }
 }
